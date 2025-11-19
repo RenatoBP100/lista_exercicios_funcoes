@@ -6,11 +6,16 @@
     */
 
     //ENTRADA
-
+    function imc() {
+        let peso = Number(prompt(`Informe o seu peso.`));
+        let altura = Number(prompt(`Informe a sua altura.`));
+        let imc = peso / altura ** 2;
+        alert(`O seu imc será: ${imc}!`); 
+    }
 
     //PROCESSAMENTO
 
 
     //SAÍDA
-
+    imc()
 </script>
