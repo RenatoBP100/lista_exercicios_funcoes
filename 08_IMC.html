@@ -6,22 +6,31 @@
     */
 
     //ENTRADA
-    function imc() {
-        let peso = Number(prompt(`Informe o seu peso: `));
-        while (Number.isNaN(peso) == true || peso < 0) {
-            let peso = Number(prompt(`Informe seu peso em kilos: `));
-        }
-        let altura = Number(prompt(`Informe a sua altura em centimetros.`));
-        while (Number.isNaN(altura) == true || altura < 0 ) {
-            let altura = Number(prompt(`Informe a sua altura em centimetros: `));
-        }
+    let peso = Number(prompt(`Informe o seu peso em kilos: `));
+    while (Number.isNaN(peso) == true || peso < 0) {
+       if(Number.isNaN(peso) == true){
+        peso = Number(prompt("Me informe um valor correto; "));
+       }
+       else if(peso < 0 ){
+        peso = Number(prompt("Me informe um valor maior que zero: "));
+       }
+    }
+    let altura = Number(prompt(`Informe a sua altura em centimetros.`));
+    while (Number.isNaN(altura) == true || altura < 0) {
+         if(Number.isNaN(altura) == true){
+        altura = Number(prompt("Me informe um valor correto; "));
+       }
+       else if(altura < 0 ){
+        altura = Number(prompt("Me informe um valor maior que zero: "));
+       }
+    }
+
+    //PROCESSAMENTO
+    function imc(peso , altura) {
         let imc = peso / altura ** 2;
         alert(`O seu imc será: ${imc}!`);
     }
 
-    //PROCESSAMENTO
-
-
     //SAÍDA
-    imc()
+    imc(peso , altura)
 </script>

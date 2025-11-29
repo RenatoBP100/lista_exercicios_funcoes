@@ -6,17 +6,24 @@
    */
 
     //ENTRADA
-
-    //PROCESSAMENTO
-    function num() {
-        let usuario = parseInt(prompt(`Informe um número inteiro`));
-        while (Number.isNaN(usuario) == false) {
-            let usuario = Number(prompt(`Informe uma temperatura em graus celsius`));
+ let usuario = parseInt(prompt(`Informe um número inteiro`));
+        while (Number.isNaN(usuario) == true || usuario < 0) {
+            if (Number.isNaN(usuario) == true) {
+                usuario = Number(prompt(`Informe um numero inteiro correto: `));
+            }
+            else if(usuario < 0){
+                 usuario = Number(prompt("Me informe um numero inteiro maior que zero: "));
+            }
+            else{
+                usuario = Number(prompt("Me informe um numero valido: "));
+            }
         }
-        let cubo = usuario ** 3;
-        alert("O cubo do número " + usuario + " é: " + cubo);
+    //PROCESSAMENTO
+    function num(numero) {
+        let cubo = numero ** 3;
+        alert("O cubo do número " + numero + " é: " + cubo);
     }
 
     //SAÍDA
-    num()
+    num(usuario)
 </script>

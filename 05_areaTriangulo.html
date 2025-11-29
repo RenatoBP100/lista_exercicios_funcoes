@@ -6,22 +6,31 @@
     */
 
     //ENTRADA
-    function area() {
-        let base = Number(prompt(`Informe o valor da base do triangulo`));
+       let base = Number(prompt(`Informe o valor da base do triangulo`));
         let altura = Number(prompt(`Informe o valor da altura do triangulo`));
-        while (Number.isNaN(base) == true) {
-            let base = Number(prompt(`Informe a base do seu triangulo: `));
+        while (Number.isNaN(base) == true || base< 0) {
+        if(Number.isNaN(base) == true){
+            base = Number(prompt("Me informe um valor correto: "));
         }
-        while (Number.isNaN(altura) == false) {
-            let altura = Number(prompt(`Informe a altura do seu triangulo`));
+        else if(base < 0){
+            base = Number(prompt("Me informe um numero positivo(Maior que zero): "))
         }
+        }
+        while (Number.isNaN(altura) == true || altura < 0 ) {
+         if(Number.isNan(altura) == true){
+            altura = Number(prompt("Me informe um valor correto: "));
+         }
+         else if(altura < 0){
+            altura = Number(prompt("Me informe um valor positivo(maior que zero): "))
+         }
+        }
+
+    //PROCESSAMENTO
+    function area(base , altura) {
         let area = (base * altura) / 2;
         alert(`A area do triângulo é: ${area}`);
     }
 
-    //PROCESSAMENTO
-
-
     //SAÍDA
-    area()
+    area(base , altura)
 </script>

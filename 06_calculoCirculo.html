@@ -8,18 +8,22 @@
   */
 
     //ENTRADA
-    function area() {
-        let raio = Number(prompt(`Informe o tamanho do raio do circulo`));
-        while (Number.isNaN(raio) == true) {
-            let raio = Number(prompt(`Informe o tamanho do raio do seu circolo: `));
+    let raio = Number(prompt(`Informe o tamanho do raio do circulo`));
+        while (Number.isNaN(raio) == true || raio < 0) {
+          if(Number.isNaN(raio) == true){
+            raio = Number(prompt("Me informe um valor correto: "))
+          }
+          else if(raio < 0){
+            raio = Number(prompt("Me informe um valor maior que zero: "))
+          }
         }
+
+    //PROCESSAMENTO
+ function area(raio) {
         let area = 2 * Math.PI * raio;
         alert(`A area do triangulo é: ${area.toFixed(2)}`);
     }
 
-    //PROCESSAMENTO
-
-
     //SAÍDA
-    area()
+    area(raio)
 </script>
