@@ -8,6 +8,9 @@
     //ENTRADA
     function cel(){
         let usuario = Number(prompt(`Informe uma temperatura em graus celsius`));
+        while(Number.isNaN(usuario) == false){
+              let usuario = Number(prompt(`Informe uma temperatura em graus celsius`));
+        }
         let fahrenheit = (9 * usuario + 160) / 5;
         alert(`A conversão dos graus para fahranheit é: ${fahrenheit}`);
     }

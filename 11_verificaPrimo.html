@@ -1,15 +1,33 @@
+Teste a IA diretamente nos seus apps favoritos … Use o Gemini para criar rascunhos e editar conteúdo, e tenha acesso à IA de última geração do Google com o Gemini Pro por R$ 96,99 R$ 0 durante 1 mês
 <script>
     /*
     PROBLEMA: VERIFICAR NÚMERO PRIMO
-    Desenvolva um programa que contenha uma função JavaScript para verificar se o número fornecido pelo usuário é um número primo ou não. Um número primo é aquele que é divisível apenas por 1 e por ele mesmo. Por exemplo, o número 7 é primo, pois só é divisível por 1 e por 7. O número 8 não é primo, pois é divisível por 1, por 2, por 4 e por 8.
+    Desenvolva um programa que contenha uma função JavaScript para verificar se o número 
+    fornecido pelo usuário é um número primo ou não. Um número primo é aquele que é
+     divisível apenas por 1 e por ele mesmo. Por exemplo, o número 7 é primo, pois só é d
+     ivisível por 1 e por 7. O número 8 não é primo, pois é divisível por 1, por 2, por 4 e por 8.
     */
 
     //ENTRADA
-
+    let numero = Number(prompt("Me informe um numero para ver se ele é primo: "))
 
     //PROCESSAMENTO
+    function validar(num) {
+        let divisivel = 0;
+        for (let i = 2; i < num; i++) {
+            if (num % i == 0) {
+                divisivel = divisivel + 1;
+            }
+        }
 
-
+        //SAÍDA
+        if (divisivel > 0) {
+            alert(`O número ${num} não é um número primo!`);
+        }
+        else {
+            alert(`O número ${numero} é um número primo!`);
+        }
+    }
     //SAÍDA
-
+validar(numero)
 </script>

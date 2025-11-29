@@ -7,10 +7,16 @@
 
     //ENTRADA
     function imc() {
-        let peso = Number(prompt(`Informe o seu peso.`));
-        let altura = Number(prompt(`Informe a sua altura.`));
+        let peso = Number(prompt(`Informe o seu peso: `));
+        while (Number.isNaN(peso) == true || peso < 0) {
+            let peso = Number(prompt(`Informe seu peso em kilos: `));
+        }
+        let altura = Number(prompt(`Informe a sua altura em centimetros.`));
+        while (Number.isNaN(altura) == true || altura < 0 ) {
+            let altura = Number(prompt(`Informe a sua altura em centimetros: `));
+        }
         let imc = peso / altura ** 2;
-        alert(`O seu imc será: ${imc}!`); 
+        alert(`O seu imc será: ${imc}!`);
     }
 
     //PROCESSAMENTO

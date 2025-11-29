@@ -9,10 +9,13 @@
 
 
     //PROCESSAMENTO
-    function far(){
-    let usuario = Number(prompt(`Informe uma temperatura em fahranheit`));
-    let celsius = (usuario - 32) * 5 / 9;
-    alert(`A conversão dos graus para fahranheit é: ${celsius.toFixed(2)}`);
+    function far() {
+        let usuario = Number(prompt(`Informe uma temperatura em fahranheit`));
+        while (Number.isNaN(usuario) == false) {
+            let usuario = Number(prompt(`Informe uma temperatura em graus celsius`));
+        }
+        let celsius = (usuario - 32) * 5 / 9;
+        alert(`A conversão dos graus para fahranheit é: ${celsius.toFixed(2)}`);
     }
 
     //SAÍDA
